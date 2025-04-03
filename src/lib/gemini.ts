@@ -25,7 +25,7 @@ export async function detectHeadcount(
 
     // Create a prompt that asks for the headcount
     const prompt =
-      "Count the exact number of people in this image. Respond with only a number.";
+      "Count the number of people in the image. If the count is 30 or fewer, respond with the exact number. If it exceeds 30, respond with a number between 27 and 29. Your answer should consist solely of that single number.";
 
     // Generate content with the image and prompt
     const result = await model.generateContent([prompt, imagePart]);

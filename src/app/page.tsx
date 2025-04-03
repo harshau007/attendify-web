@@ -1,4 +1,7 @@
 import { HeadcountForm } from "@/components/headcount-form";
+import { Button } from "@/components/ui/button";
+import { ClipboardList } from "lucide-react";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -13,6 +16,16 @@ export default function Home() {
         </p>
         <div className="w-full max-w-md">
           <HeadcountForm />
+        </div>
+
+        <div className="mt-8 pt-6 border-t w-full max-w-md flex flex-col items-center">
+          <h2 className="text-xl font-semibold mb-4">View Detection Records</h2>
+          <Button asChild className="gap-2">
+            <Link href="/records">
+              <ClipboardList className="h-4 w-4" />
+              View Records Dashboard
+            </Link>
+          </Button>
         </div>
       </div>
     </main>
