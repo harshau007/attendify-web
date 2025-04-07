@@ -13,7 +13,7 @@ export async function detectHeadcount(
 ): Promise<number | null> {
   try {
     // Get the Gemini-2.0-Flash model
-    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-pro-preview-03-25" });
 
     // Prepare the image part for the prompt
     const imagePart = {
